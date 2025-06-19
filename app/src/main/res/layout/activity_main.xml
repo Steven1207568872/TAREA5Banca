@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagen ilustrativa -->
+    <ImageView
+        android:id="@+id/illustrationImage"
+        android:layout_width="410dp"
+        android:layout_height="299dp"
+        android:contentDescription="Ilustración de persona caminando"
+        android:src="@drawable/caminando"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <!-- Botónes de inicio de sesion -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/illustrationImage">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewUsuario"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toStartOf="@id/cardViewHuella"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:src="@drawable/person_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Usuario y \nContraseña"
+                    android:textAlignment="center"
+                    android:textColor="#0C1F50"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHuella"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toStartOf="@id/cardViewCodigo"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toEndOf="@id/cardViewUsuario"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/huella" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Huella / \nFace ID"
+                    android:textAlignment="center"
+                    android:textColor="#0C1F50"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewCodigo"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toEndOf="@id/cardViewHuella"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="40dp"
+                    android:minHeight="40dp"
+                    android:src="@drawable/pin_code" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Pin de y \n6 dígitos"
+                    android:textAlignment="center"
+                    android:textColor="#0C1F50"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Botónes de ayuda -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonUbicacion"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/buttonClave"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/pin_mapa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Ubícanos"
+                    android:textAlignment="center"
+                    android:textColor="#2f7abf"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonClave"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/buttonPhone"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toEndOf="@id/buttonUbicacion"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/key" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Clave \ndigital"
+                    android:textAlignment="center"
+                    android:textColor="#2f7abf"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonPhone"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toEndOf="@id/buttonClave"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prelo_book"
+                    android:text="Llámanos"
+                    android:textAlignment="center"
+                    android:textColor="#2f7abf"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Nuevo usuario -->
+    <TextView
+        android:id="@+id/newUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/prelo_book"
+        android:text="¿Ingresar con otro usuario?"
+        android:textColor="#2f7abf"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonsContainer2" />
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/prelo_book"
+        android:text="Versión: 1.1.1"
+        android:textColor="#2f7abf"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
