@@ -1,5 +1,5 @@
-<p align="center">
-    <!-- Primera imagen al 50% -->
-    <img src="https://github.com/user-attachments/assets/cc9ed5e3-0fd3-4e02-83a9-c081ecd8d471" alt="Screenshot 2" width="25%">
-    
-</p>
+![image](https://github.com/user-attachments/assets/9bfe16c1-dd81-4764-9b8a-d6ef14b49982)
+![image](https://github.com/user-attachments/assets/8a190cc7-b9f3-452a-b632-65f6bf6d0b88)
+![image](https://github.com/user-attachments/assets/eb627e61-1c19-49c7-a24b-cc88d8c1ab75)
+![image](https://github.com/user-attachments/assets/cd8c2460-3b25-465b-8885-7b5b7d4f4541)
+
